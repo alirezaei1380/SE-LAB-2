@@ -18,13 +18,4 @@ public class Order {
         int price= this.foods.stream().mapToInt(food -> food.price).sum();
         return price;
     }
-
-    @Override
-    public String toString() {
-        String orders ="";
-        for (Food food:this.foods) {
-            orders+= food.foodName + " -> " + food.price+"\n";
-        }
-        return "Customer : " + customerName + "\nOrders are : \n" + orders + "\nTotal Price : " + this.getTotalPrice();
-    }
 }
