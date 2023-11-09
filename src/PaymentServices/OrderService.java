@@ -1,6 +1,8 @@
 package PaymentServices;
 
-public interface OrderService extends PaymentService, RegistrationService{
-    void payment(int foodPrice);
-    void register(String customerName);
+public interface OrderService {
+    public void onSiteOrderRegister(String customerName);
+    public void onlineOrderRegister(String customerName);
+    public void onSiteOrderPayment(int foodPrice);
+    public void onlineOrderPayment(int foodPrice);
 }
